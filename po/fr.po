@@ -1,0 +1,71 @@
+# $Id$
+# Copyright (c) 2013 Pierre Pronchery <khorben@defora.org>
+# This file is distributed under the same license as the Installer package.
+# Pierre Pronchery <khorben@defora.org>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Installer 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-08 23:43+0100\n"
+"PO-Revision-Date: 2013-09-16 14:06+0200\n"
+"Last-Translator: Pierre Pronchery <khorben@defora.org>\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../src/installer.c:158
+msgid "Welcome to the installer for "
+msgstr "Bienvenue dans l'installation de "
+
+#: ../src/installer.c:159
+msgid "Welcome to the installer"
+msgstr "Bienvenue"
+
+#: ../src/installer.c:172
+#, c-format
+msgid "%s installer"
+msgstr "Installation de %s"
+
+#: ../src/installer.c:183
+msgid ""
+"Congratulations!\n"
+"The installation has completed."
+msgstr ""
+"Félicitations !\n"
+"L'installation est terminée."
+
+#: ../src/installer.c:192
+msgid "Installation complete"
+msgstr "Installation terminée"
+
+#: ../src/installer.c:202
+msgid "Installer - "
+msgstr "Installer - "
+
+#: ../src/installer.c:267
+msgid "translator-credits"
+msgstr "Pierre Pronchery <khorben@defora.org>"
+
+#: ../src/installer.c:313 ../src/installer.c:318
+msgid "Question"
+msgstr "Question"
+
+#: ../src/installer.c:316
+msgid ""
+"The install operation is not complete.\n"
+"Do you really want to cancel it?"
+msgstr ""
+"L'installation n'est pas terminée.\n"
+"Voulez-vous vraiment l'interrompre en cours ?"
+
+#: ../src/installer.c:340 ../src/installer.c:344
+msgid "Error"
+msgstr "Erreur"
+
+#: ../src/main.c:78
+#, c-format
+msgid "Usage: %s profile\n"
+msgstr "Usage: %s profil\n"
