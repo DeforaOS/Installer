@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Installer
+Comment=Graphical installer
+TryExec=installer
+Exec=installer %f
+Icon=system-software-install
+Type=Application
+Categories=System;Core;GTK;
+NoDisplay=true
+StartupNotify=true
+MimeType=application/x-deforaos-installer
