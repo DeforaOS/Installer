@@ -10,7 +10,7 @@
 	<!ENTITY title     "Installer User Manual">
 	<!ENTITY package   "DeforaOS Installer">
 	<!ENTITY name      "installer">
-	<!ENTITY purpose   "Presentation tool">
+	<!ENTITY purpose   "Graphical installer">
 ]>
 <refentry>
 	<refentryinfo>
@@ -54,7 +54,7 @@
 	</refsynopsisdiv>
 	<refsect1 id="description">
 		<title>Description</title>
-		<para><command>&name;</command> is a presentation tool.</para>
+		<para><command>&name;</command> is a graphical installer.</para>
 	</refsect1>
 	<refsect1 id="options">
 		<title>Options</title>
