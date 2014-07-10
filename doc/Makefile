@@ -12,7 +12,7 @@ all: $(TARGETS)
 installer.1: installer.xml
 	./docbook.sh -P "$(PREFIX)" -- "installer.1"
 
-installer.html: installer.xml
+installer.html: installer.css.xml installer.xml manual.css.xml
 	./docbook.sh -P "$(PREFIX)" -- "installer.html"
 
 clean:
