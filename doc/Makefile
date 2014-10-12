@@ -17,6 +17,7 @@ installer.html: installer.css.xml installer.xml manual.css.xml
 
 clean:
 	$(RM) -- $(installer.1_OBJS) $(installer.html_OBJS)
+	./docbook.sh -c -P "$(PREFIX)" -- "installer.1"
 	./docbook.sh -c -P "$(PREFIX)" -- "installer.html"
 
 distclean: clean

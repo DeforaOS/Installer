@@ -17,6 +17,7 @@ fr.mo: Installer.pot fr.po
 
 clean:
 	$(RM) -- $(Installer.pot_OBJS) $(fr.mo_OBJS)
+	./gettext.sh -c -P "$(PREFIX)" -- "Installer.pot"
 	./gettext.sh -c -P "$(PREFIX)" -- "fr.mo"
 
 distclean: clean
