@@ -1,4 +1,5 @@
-TARGETS	= installer
+TARGETS	= $(OBJDIR)installer
+OBJDIR	=
 PREFIX	= /usr/local
 DESTDIR	=
 BINDIR	= $(PREFIX)/bin
@@ -17,18 +18,18 @@ INSTALL	= install
 
 all: $(TARGETS)
 
-installer_OBJS = installer.o main.o
+installer_OBJS = $(OBJDIR)installer.o $(OBJDIR)main.o
 installer_CFLAGS = $(CPPFLAGSF) $(CPPFLAGS) $(CFLAGSF) $(CFLAGS)
 installer_LDFLAGS = $(LDFLAGSF) $(LDFLAGS)
 
-installer: $(installer_OBJS)
-	$(CC) -o installer $(installer_OBJS) $(installer_LDFLAGS)
+$(OBJDIR)installer: $(installer_OBJS)
+	$(CC) -o $(OBJDIR)installer $(installer_OBJS) $(installer_LDFLAGS)
 
-installer.o: installer.c installer.h ../config.h
-	$(CC) -D PREFIX=\"$(PREFIX)\" $(installer_CFLAGS) -c installer.c
+$(OBJDIR)installer.o: installer.c installer.h ../config.h
+	$(CC) -D PREFIX=\"$(PREFIX)\" $(installer_CFLAGS) -o $(OBJDIR)installer.o -c installer.c
 
-main.o: main.c installer.h ../config.h
-	$(CC) $(installer_CFLAGS) -c main.c
+$(OBJDIR)main.o: main.c installer.h ../config.h
+	$(CC) $(installer_CFLAGS) -o $(OBJDIR)main.o -c main.c
 
 clean:
 	$(RM) -- $(installer_OBJS)
@@ -38,7 +39,7 @@ distclean: clean
 
 install: $(TARGETS)
 	$(MKDIR) $(DESTDIR)$(BINDIR)
-	$(INSTALL) -m 0755 installer $(DESTDIR)$(BINDIR)/installer
+	$(INSTALL) -m 0755 $(OBJDIR)installer $(DESTDIR)$(BINDIR)/installer
 
 uninstall:
 	$(RM) -- $(DESTDIR)$(BINDIR)/installer

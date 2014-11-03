@@ -1,4 +1,5 @@
-TARGETS	= installer.1 installer.html
+TARGETS	= $(OBJDIR)installer.1 $(OBJDIR)installer.html
+OBJDIR	=
 PREFIX	= /usr/local
 DESTDIR	=
 RM	= rm -f
@@ -9,11 +10,11 @@ INSTALL	= install
 
 all: $(TARGETS)
 
-installer.1: installer.xml
-	./docbook.sh -P "$(PREFIX)" -- "installer.1"
+$(OBJDIR)installer.1: installer.xml
+	./docbook.sh -P "$(PREFIX)" -- "$(OBJDIR)installer.1"
 
-installer.html: installer.css.xml installer.xml manual.css.xml
-	./docbook.sh -P "$(PREFIX)" -- "installer.html"
+$(OBJDIR)installer.html: installer.css.xml installer.xml manual.css.xml
+	./docbook.sh -P "$(PREFIX)" -- "$(OBJDIR)installer.html"
 
 clean:
 	$(RM) -- $(installer.1_OBJS) $(installer.html_OBJS)
@@ -24,8 +25,8 @@ distclean: clean
 	$(RM) -- $(TARGETS)
 
 install: $(TARGETS)
-	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -i -- "installer.1"
-	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -i -- "installer.html"
+	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -i -- "$(OBJDIR)installer.1"
+	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -i -- "$(OBJDIR)installer.html"
 
 uninstall:
 	./docbook.sh -P "$(DESTDIR)$(PREFIX)" -u -- "installer.1"
