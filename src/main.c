@@ -57,7 +57,7 @@ static int _installer(char const * profile)
 	Installer * installer;
 
 	if((installer = installer_new(profile)) == NULL)
-		return -_error(error_get(), 1);
+		return -_error(error_get(NULL), 1);
 	gtk_main();
 	installer_delete(installer);
 	return 0;
